@@ -1,205 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Trivia Game</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Trivia Game</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-    <div class="jumbotron">
-      <div class="container">
+  <div class="container" style="background-color: rgba(10, 13, 17, 0.6);">
 
-        <div id="wrapper">
+    <div class="jumbotron" style="background-color: #20315A; color: white; height: 200px;">
+      <h2 class="text-center">
+        <strong>Random Historical Trivia</strong>
 
-          <h2>Random Historical Trivia</h2>
+      </h2>
+    </div>
+    <div id="wrapper">
+      <div class="container" id="trivia-background">
+        <div class="card">
 
-                <div id="timer">Time Remaining: 30 Seconds</div>
-
-                <div id="startButton">
-                    <button id="start">Start Game</button>
-                </div>
-
-                <div class="container">
-                <form id="trivia">
-                    <div class="question">Who was the first female US Congressperson?<br>
-
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
-                        <label class="form-check-label" for="inlineRadio1">Jeannette Pickering Rankin</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
-                        <label class="form-check-label" for="inlineRadio2">Eleanor Roosevelt</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="2">
-                        <label class="form-check-label" for="inlineRadio3">Amelia Earhart</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="2">
-                          <label class="form-check-label" for="inlineRadio3">Dorothy Day</label>
-                        </div>
-                    </div>
-
-                    <div class="question">When did the “Black Death” plague first hit Europe?<br>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio1" value="2">
-                            <label class="form-check-label" for="inlineRadio1">1688 CE</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="2">
-                            <label class="form-check-label" for="inlineRadio2">1453 CE</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="2">
-                            <label class="form-check-label" for="inlineRadio3">112 BCE</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="1">
-                              <label class="form-check-label" for="inlineRadio3">1347 CE</label>
-                            </div>
-                        </div>
-
-                        <div class="question">
-                            What was the name of the Marxist peasant rebellion that broke out in the Philippines after World War II?<br>
-                            <div class="form-check form-check-inline">
-                              
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio1" value="2">
-                                <label class="form-check-label" for="inlineRadio1">The Khmer Rouge</label>
-                              </div>
-                              <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio2" value="2">
-                                <label class="form-check-label" for="inlineRadio2">The Filipino National Movement</label>
-                              </div>
-                              <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="2">
-                                <label class="form-check-label" for="inlineRadio3">The Huk Rebellion </label>
-                              </div>
-                              <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="1">
-                                  <label class="form-check-label" for="inlineRadio3">The Great Awakening</label>
-                                </div>                              
-                            </div>
-                        
-                            <div class="question">What is the largest animal in Earth’s history?<br>
-
-                              <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio1" value="2">
-                                  <label class="form-check-label" for="inlineRadio1">Brontosaurus</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio2" value="2">
-                                  <label class="form-check-label" for="inlineRadio2">African Elephant</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                  <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio3" value="1">
-                                  <label class="form-check-label" for="inlineRadio3">White Whale</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio3" value="2">
-                                    <label class="form-check-label" for="inlineRadio3">Tyrannosaurus Rex</label>
-                                  </div>
-                              </div>
-
-                              <div class="question">How many counties are there in North Carolina?<br>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio1" value="2">
-                                    <label class="form-check-label" for="inlineRadio1">50</label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio2" value="2">
-                                    <label class="form-check-label" for="inlineRadio2">25</label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio3" value="1">
-                                    <label class="form-check-label" for="inlineRadio3">78</label>
-                                  </div>
-                                  <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio3" value="2">
-                                    <label class="form-check-label" for="inlineRadio3">100</label>
-                                  </div>
-                                </div>
-
-                                <div class="question">How many counties are there in North Carolina?<br>
-                                  <div class="form-check form-check-inline">
-                                      <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio1" value="2">
-                                      <label class="form-check-label" for="inlineRadio1">50</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                      <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio2" value="2">
-                                      <label class="form-check-label" for="inlineRadio2">25</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                      <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio3" value="1">
-                                      <label class="form-check-label" for="inlineRadio3">78</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                      <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio3" value="2">
-                                      <label class="form-check-label" for="inlineRadio3">100</label>
-                                    </div>
-                                  </div>
-
-                                  <div class="question">How many counties are there in North Carolina?<br>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio1" value="2">
-                                        <label class="form-check-label" for="inlineRadio1">50</label>
-                                      </div>
-                                      <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio2" value="2">
-                                        <label class="form-check-label" for="inlineRadio2">25</label>
-                                      </div>
-                                      <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio3" value="1">
-                                        <label class="form-check-label" for="inlineRadio3">78</label>
-                                      </div>
-                                      <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio3" value="2">
-                                        <label class="form-check-label" for="inlineRadio3">100</label>
-                                      </div>
-                                    </div>
-
-                                    <div class="question">How many counties are there in North Carolina?<br>
-                                      <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio1" value="2">
-                                          <label class="form-check-label" for="inlineRadio1">50</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio2" value="2">
-                                          <label class="form-check-label" for="inlineRadio2">25</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio3" value="1">
-                                          <label class="form-check-label" for="inlineRadio3">78</label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                          <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio3" value="2">
-                                          <label class="form-check-label" for="inlineRadio3">100</label>
-                                        </div>
-                                      </div>
-                    </form>
-                  </div>
-
-                
-                
-                <div id="timesUp"></div>
-                <div id="correctAns"></div>
-                <div id="incorrectAns"></div>
-                <div id="unAnswered"></div>
-                <br/>
-                
-
-          
+          <div class="card-body">
+            <h3>
+              <div id="timer">Answer 10 Questions in 60 Seconds</div>
+            </h3>
+            <h4><div id="timesUp"></div></h4>
+            <div id="correctAns" class="results"></div>
+            <div id="incorrectAns" class="results"></div>
+            <div id="unAnswered" class="results"></div>
+            <h5 class="card-title" id="timesUp"></h5>
+            <div id="startButton">
+                <button id="start" class="btn btn-primary">Start Game</button>
               </div>
-              </div>
-   </div>
+            <div id="timesUp"></div>
+          </div>
+        </div>
 
-        <!-- jQuery -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <form id="trivia">
+          <div class="question"><strong>Who was the first female US Congressperson?</strong><br>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
+              <label class="form-check-label" for="inlineRadio1">Jeannette Pickering Rankin</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
+              <label class="form-check-label" for="inlineRadio2">Eleanor Roosevelt</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="2">
+              <label class="form-check-label" for="inlineRadio3">Amelia Earhart</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="2">
+              <label class="form-check-label" for="inlineRadio3">Dorothy Day</label>
+            </div>
+          </div>
 
-        <!-- Script -->
-        <script type="text/javascript" src="assets/javascript/app.js"></script>
+          <div class="question"><strong>When did the “Black Death” plague first hit Europe?</strong><br>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio1" value="2">
+              <label class="form-check-label" for="inlineRadio1">1688 CE</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="2">
+              <label class="form-check-label" for="inlineRadio2">1453 CE</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="2">
+              <label class="form-check-label" for="inlineRadio3">112 BCE</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="1">
+              <label class="form-check-label" for="inlineRadio3">1347 CE</label>
+            </div>
+          </div>
+
+          <div class="question"><strong>What was the name of the Marxist peasant rebellion that broke out in the Philippines after World War II?</strong><br>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio1" value="2">
+              <label class="form-check-label" for="inlineRadio1">The Khmer Rouge</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio2" value="2">
+              <label class="form-check-label" for="inlineRadio2">The Filipino National Movement</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="2">
+              <label class="form-check-label" for="inlineRadio3">The Huk Rebellion </label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="1">
+              <label class="form-check-label" for="inlineRadio3">The Great Awakening</label>
+            </div>
+          </div>
+
+          <div class="question"><strong>What is the largest animal in Earth’s history?</strong><br>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio1" value="2">
+              <label class="form-check-label" for="inlineRadio1">Brontosaurus</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio2" value="2">
+              <label class="form-check-label" for="inlineRadio2">African Elephant</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio3" value="1">
+              <label class="form-check-label" for="inlineRadio3">White Whale</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio3" value="2">
+              <label class="form-check-label" for="inlineRadio3">Tyrannosaurus Rex</label>
+            </div>
+          </div>
+
+          <div class="question"><strong>How many counties are there in North Carolina?</strong><br>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio1" value="2">
+              <label class="form-check-label" for="inlineRadio1">50</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio2" value="2">
+              <label class="form-check-label" for="inlineRadio2">25</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio3" value="1">
+              <label class="form-check-label" for="inlineRadio3">78</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions5" id="inlineRadio3" value="2">
+              <label class="form-check-label" for="inlineRadio3">100</label>
+            </div>
+          </div>
+
+          <div class="question"><strong>Which of the following was NOT a ruling dynasty in France?</strong><br>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio1" value="1">
+              <label class="form-check-label" for="inlineRadio1">Plantagenet</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio2" value="2">
+              <label class="form-check-label" for="inlineRadio2">Valois</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio3" value="2">
+              <label class="form-check-label" for="inlineRadio3">Merovingians</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions6" id="inlineRadio3" value="2">
+              <label class="form-check-label" for="inlineRadio3">Bourbons</label>
+            </div>
+          </div>
+
+          <div class="question"><strong>What was the name of Napoleon’s second wife?</strong><br>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio1" value="2">
+              <label class="form-check-label" for="inlineRadio1">Josephine Bonaparte</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio2" value="1">
+              <label class="form-check-label" for="inlineRadio2">Marie-Louise</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio3" value="2">
+              <label class="form-check-label" for="inlineRadio3">Marie Curie</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions7" id="inlineRadio3" value="2">
+              <label class="form-check-label" for="inlineRadio3">Marie Antoinette</label>
+            </div>
+          </div>
+
+          <div class="question"><strong>What was the name of the Mongolian state in Persia?</strong><br>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio1" value="1">
+              <label class="form-check-label" for="inlineRadio1">The Ilkhanate (correct answer)</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio2" value="2">
+              <label class="form-check-label" for="inlineRadio2">The Golden Horde</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio3" value="2">
+              <label class="form-check-label" for="inlineRadio3">The Umayyad Caliphate</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions8" id="inlineRadio3" value="2">
+              <label class="form-check-label" for="inlineRadio3">The Seljuks</label>
+            </div>
+          </div>
+      
+          <div class="question"><strong>During the height of the Roman Republic, how many ruling Consuls were there at any one time (in normal circumstances)?</strong><br>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio1" value="2">
+              <label class="form-check-label" for="inlineRadio1">4</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio2" value="2">
+              <label class="form-check-label" for="inlineRadio2">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio3" value="2">
+              <label class="form-check-label" for="inlineRadio3">1</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions9" id="inlineRadio3" value="1">
+              <label class="form-check-label" for="inlineRadio3">1</label>
+            </div>
+          </div>
+
+          <div class="question"><strong>Which of the follwoing was not on of the thirteen original colonies?</strong><br>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio1" value="2">
+              <label class="form-check-label" for="inlineRadio1">Virginia</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio2" value="2">
+              <label class="form-check-label" for="inlineRadio2">Georgia</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio3" value="1">
+              <label class="form-check-label" for="inlineRadio3">Vermont</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions10" id="inlineRadio3" value="2">
+              <label class="form-check-label" for="inlineRadio3">New York</label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+
+
+
+      <br />
+    </div>
+
+
+  </div>
+  </div>
+
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Script -->
+  <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
+
 </html>
