@@ -19,12 +19,14 @@ function start() {
   wins = 0;
   losses = 0;
   none = 10;
+  $("#timer").text("Time Remaining: 30 Seconds")
   $("#timesUp").empty();
   $("#correctAns").empty();
   $("#incorrectAns").empty();
   $("#unAnswered").empty();
   $(":input[type=radio]").prop("checked", false);
   $("#trivia").css("display", "inline");
+  $("#start").css("display", "none");
 
   if (!clockRunning) {
     setTimeout(stop, 1000 * 11);
@@ -43,6 +45,8 @@ function stop() {
   $("#correctAns").text("Correct Answers:  " + wins);
   $("#incorrectAns").text("Incorrect Answers:  " + losses);
   $("#unAnswered").text("Unanswered:  " + none);
+  $("#start").css("display", "inline");
+  $("#start").text("Play Again?");
 
 
   // Hide questions after clock times out
