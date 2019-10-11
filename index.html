@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trivia Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="jumbotron">
+      <div class="container">
+
+        <div id="wrapper">
+
+                <div id="timer">Time Remaining: 30 Seconds</div>
+
+                <div id="startButton">
+                    <button id="start">Start Game</button>
+                </div>
+
+                <div class="container">
+                <form id="trivia">
+                    <div class="question">Who was the first female US Congressperson?<br>
+
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1">
+                        <label class="form-check-label" for="inlineRadio1">Jeannette Pickering Rankin</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2">
+                        <label class="form-check-label" for="inlineRadio2">Eleanor Roosevelt</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="2">
+                        <label class="form-check-label" for="inlineRadio3">Amelia Earhart</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="2">
+                          <label class="form-check-label" for="inlineRadio3">Dorothy Day</label>
+                        </div>
+                    </div>
+
+                    <div class="question">When did the “Black Death” plague first hit Europe?<br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio1" value="2">
+                            <label class="form-check-label" for="inlineRadio1">1688 CE</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="2">
+                            <label class="form-check-label" for="inlineRadio2">1453 CE</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="2">
+                            <label class="form-check-label" for="inlineRadio3">112 BCE</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio3" value="1">
+                              <label class="form-check-label" for="inlineRadio3">1347 CE</label>
+                            </div>
+                        </div>
+
+                        <div class="question">
+                            What was the name of the Marxist peasant rebellion that broke out in the Philippines after World War II?<br>
+                            <div class="form-check form-check-inline">
+                              
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio1" value="2">
+                                <label class="form-check-label" for="inlineRadio1">The Khmer Rouge</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio2" value="2">
+                                <label class="form-check-label" for="inlineRadio2">The Filipino National Movement</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="2">
+                                <label class="form-check-label" for="inlineRadio3">The Huk Rebellion </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                  <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio3" value="1">
+                                  <label class="form-check-label" for="inlineRadio3">The Great Awakening</label>
+                                </div>
+                              
+                            </div>
+                    </form>
+                  </div>
+
+                
+                
+                <div id="timesUp"></div>
+                <div id="correctAns"></div>
+                <div id="incorrectAns"></div>
+                <div id="unAnswered"></div>
+                <br/>
+                
+
+          
+              </div>
+              </div>
+   </div>
+
+        <!-- jQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Script -->
+        <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+</html>
