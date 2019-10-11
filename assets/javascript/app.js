@@ -4,9 +4,9 @@ window.onload = function () {
   $("#reset").css("display", "none");
 };
 
-//  Global variables that will hold our setInterval that runs the stopwatch and sets var clockRunning to false
+//  Global variables
 var intervalId;
-var time = 30;
+var time = 10;
 var clockRunning = false;
 var wins = 0;
 var losses = 0;
