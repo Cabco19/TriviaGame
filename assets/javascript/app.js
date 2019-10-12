@@ -12,8 +12,7 @@ var losses = 0;
 var none = 10;
 
 function start() {
-  // REMEMBER TO REVISE TIMER BEFORE FINAL UPLOAD
-  //  Start the timer. Use setInterval to start the count here and set the clock to running. Using setTimeout stop the clock after REVISE THIS NUMBER WHEN DONE30seconds
+  //  Start the timer. Use setInterval to start the count here and set the clock to running. Using setTimeout stop the clock after 60 seconds
   time = 60;
   wins = 0;
   losses = 0;
@@ -34,7 +33,7 @@ function start() {
     clockRunning = true;
   }
 }
-// When the game times out run the following code and displays # of correct/wrong answers.
+// When the game times out run the following code and display # of correct/wrong answers.
 function stop() {
   // Stop the timer 
   clearInterval(intervalId);
@@ -62,28 +61,19 @@ function count() {
 }
 
 function answerLog() {
-  // create loop here based on questions ID length? Maybe this will work not sure. Create anither questions and attaempt to loop through all of them.
-  //var results = [];
-  //var radio = $( "input[type=radio][name=inlineRadioOptions]:checked" ).val();
-  //var radio2 = $( "input[type=radio][name=inlineRadioOptions2]:checked" ).val();
+  // Loop through the answers array and capture correct and incorrect answers 
   var radio = $(":input[type=radio]").serializeArray();
-  console.log(radio.length);
-  console.log(radio);
+  
   for (var i = 0; i < radio.length; i++) {
-    console.log(radio[i].value);
     var a = radio[i].value;
     if (a === "1") {
-      console.log("You are correct!");
       wins++
       none--;
     }
     if (a === "2") {
-      console.log("Wrong!");
+      
       losses++;
       none--;
-    }
-    if (a === "") {
-      console.log("you didnt answer " + none + "questions");
     }
   }
 }
